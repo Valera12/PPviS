@@ -18,7 +18,7 @@ public class myButtonActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent event) {
-       // label = textField.getText();
+
 
         for (int i = 0; i < comboBox.getItemCount(); i++) {
             if (textField.getText().equals(comboBox.getItemAt(i))) {
