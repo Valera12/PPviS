@@ -22,6 +22,10 @@ public class Main {
         JRadioButton radioButton1 = new JRadioButton("THE FIRST");
         JRadioButton radioButton2 = new JRadioButton("THE SECOND");
         JRadioButton radioButton3 = new JRadioButton("THE THIRD");
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(radioButton1);
+        buttonGroup.add(radioButton2);
+        buttonGroup.add(radioButton3);
 
         JCheckBox checkBox1 = new JCheckBox("THE FIRST");
         JCheckBox checkBox2 = new JCheckBox("THE SECOND");
@@ -37,12 +41,12 @@ public class Main {
         JButton myButton4 = new JButton("RadioButton");
         JButton myButton5 =new JButton("CheckBox");
 
-        myButton.addActionListener(new MyButtonActionListener(textField, label, comboBox));
-        myButton2.addActionListener(new MyButton2ActionListener(textField, swap, myButton2, myButton3));
-        myButton3.addActionListener(new MyButton3ActionListener(textField, swap, myButton2, myButton3));
-        myButton4.addActionListener(new MyButton4ActionListener(textField, myButton4, radioButton1, radioButton2,
+        myButton.addActionListener(new AddElToComboBoxActionListener(textField, label, comboBox));
+        myButton2.addActionListener(new RenameActionListener(textField, swap, myButton2, myButton3));
+        myButton3.addActionListener(new SwapActionListener(textField, swap, myButton2, myButton3));
+        myButton4.addActionListener(new RadioButtonActionListener(textField, myButton4, radioButton1, radioButton2,
                 radioButton3));
-        myButton5.addActionListener(new MyButton5ActionListener(textField, myButton5, checkBox1, checkBox2, checkBox3));
+        myButton5.addActionListener(new CheckBoxActionListener(textField, myButton5, checkBox1, checkBox2, checkBox3));
 
 
 

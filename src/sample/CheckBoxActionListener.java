@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyButton5ActionListener implements ActionListener {
+public class CheckBoxActionListener implements ActionListener {
 
     JTextField textField = new JTextField();
     JButton myButton5 = new JButton();
@@ -13,8 +13,8 @@ public class MyButton5ActionListener implements ActionListener {
     JCheckBox checkBox3 = new JCheckBox();
 
 
-    public MyButton5ActionListener(JTextField textField,
-                                   JButton myButton5, JCheckBox checkBox1, JCheckBox checkBox2, JCheckBox checkBox3) {
+    public CheckBoxActionListener(JTextField textField,
+                                  JButton myButton5, JCheckBox checkBox1, JCheckBox checkBox2, JCheckBox checkBox3) {
         this.textField = textField;
         this.myButton5 = myButton5;
         this.checkBox1 = checkBox1;

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyButton4ActionListener implements ActionListener {
+public class RadioButtonActionListener implements ActionListener {
 
     JTextField textField = new JTextField();
     JButton myButton4 = new JButton();
@@ -13,9 +13,9 @@ public class MyButton4ActionListener implements ActionListener {
     JRadioButton radioButton3 = new JRadioButton();
 
 
-    public MyButton4ActionListener(JTextField textField,
-                                   JButton myButton4, JRadioButton radioButton1, JRadioButton radioButton2,
-                                   JRadioButton radioButton3) {
+    public RadioButtonActionListener(JTextField textField,
+                                     JButton myButton4, JRadioButton radioButton1, JRadioButton radioButton2,
+                                     JRadioButton radioButton3) {
         this.textField = textField;
         this.myButton4 = myButton4;
         this.radioButton1 = radioButton1;
