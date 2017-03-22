@@ -2,6 +2,7 @@ package sample;
 
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.JTable;
 
 public class Main {
 
@@ -18,6 +19,15 @@ public class Main {
         String str4 = new String();
         String label = new String();
         String swap = new String();
+
+        String[] columnNames = {
+                "Name",
+                "Last modified",
+        };
+
+        JTable table = new JTable();
+
+        JScrollPane scrollPane = new JScrollPane(table);
 
         JRadioButton radioButton1 = new JRadioButton("THE FIRST");
         JRadioButton radioButton2 = new JRadioButton("THE SECOND");
@@ -39,7 +49,10 @@ public class Main {
         JButton myButton2 = new JButton("Rename");
         JButton myButton3 = new JButton("Swap ");
         JButton myButton4 = new JButton("RadioButton");
-        JButton myButton5 =new JButton("CheckBox");
+        JButton myButton5 = new JButton("CheckBox");
+        JButton myButton6 = new JButton("Add To Table");
+        JButton myButton7 = new JButton("Rebase 1->2");
+        JButton myButton8 = new JButton("Rebase 2->1");
 
         myButton.addActionListener(new AddElToComboBoxActionListener(textField, label, comboBox));
         myButton2.addActionListener(new RenameActionListener(textField, swap, myButton2, myButton3));
@@ -91,18 +104,31 @@ public class Main {
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 
-        frame.add(checkBox1, new GridBagConstraints(3, 0, 1, 1, 1, 1,
+        frame.add(checkBox1, new GridBagConstraints(0, 3, 1, 1, 1, 1,
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 
-        frame.add(checkBox2, new GridBagConstraints(3, 1, 1, 1, 1, 1,
+        frame.add(checkBox2, new GridBagConstraints(1, 3, 1, 1, 1, 1,
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 
-        frame.add(checkBox3, new GridBagConstraints(3, 2, 1, 1, 1, 1,
+        frame.add(checkBox3, new GridBagConstraints(2, 3, 1, 1, 1, 1,
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 
+        frame.add(myButton6, new GridBagConstraints(0, 5, 1, 1, 1, 1,
+                GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
+                new Insets(1, 1,1,1),0, 0));
+
+        frame.add(myButton7, new GridBagConstraints(1, 5, 1, 1, 1, 1,
+                GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
+                new Insets(1, 1,1,1),0, 0));
+
+        frame.add(myButton8, new GridBagConstraints(2, 5, 1, 1, 1, 1,
+                GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
+                new Insets(1, 1,1,1),0, 0));
+
+        frame.add(scrollPane);
 
         frame.setVisible(true);
         frame.pack();
