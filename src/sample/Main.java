@@ -37,9 +37,9 @@ public class Main {
         JButton myButton4 = new JButton("RadioButton");
         JButton myButton5 =new JButton("CheckBox");
 
-        myButton.addActionListener(new myButtonActionListener(textField, label, comboBox));
-        myButton2.addActionListener(new myButton2ActionListener(textField, swap, myButton2, myButton3));
-        myButton3.addActionListener(new myButton3ActionListener(textField, swap, myButton2, myButton3));
+        myButton.addActionListener(new MyButtonActionListener(textField, label, comboBox));
+        myButton2.addActionListener(new MyButton2ActionListener(textField, swap, myButton2, myButton3));
+        myButton3.addActionListener(new MyButton3ActionListener(textField, swap, myButton2, myButton3));
         myButton4.addActionListener(new MyButton4ActionListener(textField, myButton4, radioButton1, radioButton2,
                 radioButton3));
         myButton5.addActionListener(new MyButton5ActionListener(textField, myButton5, checkBox1, checkBox2, checkBox3));
