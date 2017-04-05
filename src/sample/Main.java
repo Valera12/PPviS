@@ -19,15 +19,15 @@ public class Main {
         String str4 = new String();
         String label = new String();
         String swap = new String();
+        String tbl = new String();
 
-        String[] columnNames = {
-                "Name",
-                "Last modified",
+/*        String[] columnNames = {
         };
+        String[][] data = {
+        };
+*/
+        JTable table = new JTable(1, 2);
 
-        JTable table = new JTable();
-
-        JScrollPane scrollPane = new JScrollPane(table);
 
         JRadioButton radioButton1 = new JRadioButton("THE FIRST");
         JRadioButton radioButton2 = new JRadioButton("THE SECOND");
@@ -60,6 +60,9 @@ public class Main {
         myButton4.addActionListener(new RadioButtonActionListener(textField, myButton4, radioButton1, radioButton2,
                 radioButton3));
         myButton5.addActionListener(new CheckBoxActionListener(textField, myButton5, checkBox1, checkBox2, checkBox3));
+        myButton6.addActionListener(new AddElToTableActionListener(textField, tbl, myButton6, table));
+        myButton7.addActionListener(new RebaseActionListener(textField, tbl, myButton7, table));
+        myButton8.addActionListener(new ReversRebaseActionListener(textField, tbl, myButton8, table));
 
 
 
@@ -128,7 +131,7 @@ public class Main {
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 
-        frame.add(scrollPane);
+        frame.add(table);
 
         frame.setVisible(true);
         frame.pack();
