@@ -1,7 +1,9 @@
 package sample;
 
+import java.util.Timer;
 import javax.swing.*;
 import java.awt.*;
+import java.util.TimerTask;
 import javax.swing.JTable;
 
 public class Main {
@@ -21,12 +23,10 @@ public class Main {
         String swap = new String();
         String tbl = new String();
 
-/*        String[] columnNames = {
-        };
-        String[][] data = {
-        };
-*/
+
         JTable table = new JTable(1, 2);
+
+        Timer time = new Timer();
 
 
         JRadioButton radioButton1 = new JRadioButton("THE FIRST");
@@ -53,6 +53,7 @@ public class Main {
         JButton myButton6 = new JButton("Add To Table");
         JButton myButton7 = new JButton("Rebase 1->2");
         JButton myButton8 = new JButton("Rebase 2->1");
+        JButton myButton9 = new JButton("Move");
 
         myButton.addActionListener(new AddElToComboBoxActionListener(textField, label, comboBox));
         myButton2.addActionListener(new RenameActionListener(textField, swap, myButton2, myButton3));
@@ -63,6 +64,7 @@ public class Main {
         myButton6.addActionListener(new AddElToTableActionListener(textField, tbl, myButton6, table));
         myButton7.addActionListener(new RebaseActionListener(textField, tbl, myButton7, table));
         myButton8.addActionListener(new ReversRebaseActionListener(textField, tbl, myButton8, table));
+        myButton9.addActionListener(new SelectedItemCombobBox(comboBox, time));
 
 
 
@@ -128,6 +130,10 @@ public class Main {
                 new Insets(1, 1,1,1),0, 0));
 
         frame.add(myButton8, new GridBagConstraints(2, 5, 1, 1, 1, 1,
+                GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
+                new Insets(1, 1,1,1),0, 0));
+
+        frame.add(myButton9, new GridBagConstraints(3, 5, 1, 1, 1, 1,
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 

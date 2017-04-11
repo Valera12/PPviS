@@ -28,7 +28,7 @@ public class AddElToComboBoxActionListener implements ActionListener {
         }
 
         comboBox.addItem(textField.getText());
-
+       // comboBox.setSelectedItem(3);
     }
 
 }
