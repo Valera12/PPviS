@@ -1,6 +1,7 @@
 package sample;
 
 import java.util.Timer;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.TimerTask;
@@ -22,6 +23,7 @@ public class Main {
         String label = new String();
         String swap = new String();
         String tbl = new String();
+        int i = 0;
 
 
         JTable table = new JTable(1, 2);
@@ -64,7 +66,7 @@ public class Main {
         myButton6.addActionListener(new AddElToTableActionListener(textField, tbl, myButton6, table));
         myButton7.addActionListener(new RebaseActionListener(textField, tbl, myButton7, table));
         myButton8.addActionListener(new ReversRebaseActionListener(textField, tbl, myButton8, table));
-        myButton9.addActionListener(new SelectedItemCombobBox(comboBox, time));
+        myButton9.addActionListener(new SelectedItemComboBox(comboBox, time, frame));
 
 
 
