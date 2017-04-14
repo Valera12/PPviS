@@ -56,6 +56,7 @@ public class Main {
         JButton myButton7 = new JButton("Rebase 1->2");
         JButton myButton8 = new JButton("Rebase 2->1");
         JButton myButton9 = new JButton("Move");
+        JButton myButton10 = new JButton("END");
 
         myButton.addActionListener(new AddElToComboBoxActionListener(textField, label, comboBox));
         myButton2.addActionListener(new RenameActionListener(textField, swap, myButton2, myButton3));
@@ -67,6 +68,7 @@ public class Main {
         myButton7.addActionListener(new RebaseActionListener(textField, tbl, myButton7, table));
         myButton8.addActionListener(new ReversRebaseActionListener(textField, tbl, myButton8, table));
         myButton9.addActionListener(new SelectedItemComboBox(comboBox, time, frame));
+        myButton10.addActionListener(new EndMoveActionListener(comboBox, time, frame));
 
 
 
@@ -139,6 +141,10 @@ public class Main {
                 GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
                 new Insets(1, 1,1,1),0, 0));
 
+        frame.add(myButton10, new GridBagConstraints(4, 5, 1, 1, 1, 1,
+                GridBagConstraints.NORTH,GridBagConstraints.HORIZONTAL,
+                new Insets(1, 1,1,1),0, 0));
+
         frame.add(table);
 
         frame.setVisible(true);
@@ -146,7 +152,8 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         new Main();
     }
 }
